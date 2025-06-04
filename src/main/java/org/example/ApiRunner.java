@@ -7,47 +7,51 @@ import com.flipkart.zjsonpatch.JsonDiff;
 import org.springframework.http.*;
 import org.springframework.web.client.RestTemplate;
 
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.InputStream;
-import java.net.URI;
-import java.util.Iterator;
-import java.util.Map;
+import java.io.*;
+import java.util.*;
 
 public class ApiRunner {
 
     public static void main(String[] args) throws Exception {
 
-        //pass "templates" in the first argument
-        String path = args[0];
-
-        URI uri = ApiRunner.class.getClassLoader().getResource(path).toURI();
-
-        File folder = new File(uri);
-        File[] files = folder.listFiles((dir, name) -> name.endsWith(".json"));
-        if(files == null || files.length ==0) {
-            System.out.println("No Json Files found in resources folder");
-            return;
+        if(args.length < 1) {
+            System.out.println("Please provide complete JSON file or directory.");
+            System.exit(1);
         }
+
+        File input = new File(args[0]);
+        List<File> jsonFiles = new ArrayList<>();
+
+        if(input.isFile() && input.getName().endsWith(".json")) {
+            jsonFiles.add(input);
+        } else if(input.isDirectory()) {
+            File[] files = input.listFiles((dir, name) -> name.endsWith(".json"));
+            if(files !=null){
+                jsonFiles.addAll(Arrays.asList(files));
+            }
+        } else {
+            System.out.println("Invalid input :" +args[0]);
+            System.exit(1);
+        }
+        doOperation(jsonFiles);
+
+    }
+
+    private static void doOperation(List<File> jsonFiles) throws IOException {
 
         ObjectMapper mapper = new ObjectMapper();
         RestTemplate restTemplate = new RestTemplate();
 
-        for(File file : files) {
-            System.out.println("\n Processing file - " + file.getName() +" ...");
-            InputStream input = new FileInputStream(file);
-            JsonNode root = mapper.readTree(input);
+        for(File jsonFile : jsonFiles) {
+            System.out.println("\n Processing file - " + jsonFile.getName() +" ...");
+            InputStream inputStream = new FileInputStream(jsonFile);
+            JsonNode root = mapper.readTree(inputStream);
 
             // Extract request details
             JsonNode requestNode = root.path("request");
             String method = requestNode.path("method").asText();
             String url = requestNode.path("url").asText();
             JsonNode headersNode = requestNode.path("headers");
-
-       /* if (!"GET".equalsIgnoreCase(method)) {
-            throw new UnsupportedOperationException("Only GET method supported in this example.");
-        }*/
-            // in of multiple HTTP methods , we can add case here
 
             // Prepare headers
             HttpHeaders headers = new HttpHeaders();
@@ -57,9 +61,17 @@ public class ApiRunner {
                 headers.add(entry.getKey(), entry.getValue().asText());
             }
 
-            // Send request
+            // Send request based on GET and POST
             HttpEntity<String> entity = new HttpEntity<>(headers);
-            ResponseEntity<String> responseEntity = restTemplate.exchange(url, HttpMethod.GET, entity, String.class);
+            ResponseEntity<String> responseEntity = null;
+
+            // Check request type
+            if("GET".equalsIgnoreCase(method)) {
+                responseEntity = restTemplate.exchange(url, HttpMethod.GET, entity, String.class);
+            }
+            if("POST".equalsIgnoreCase(method)) {
+                responseEntity = restTemplate.exchange(url, HttpMethod.POST, entity, String.class);
+            }
 
             JsonNode actualResponse = mapper.readTree(responseEntity.getBody());
             JsonNode expectedResponse = root.path("testcase").path("expected");
