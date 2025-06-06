@@ -8,6 +8,9 @@ import org.springframework.http.*;
 import org.springframework.web.client.RestTemplate;
 
 import java.io.*;
+import java.nio.file.Files;
+import java.nio.file.Paths;
+import java.nio.file.StandardOpenOption;
 import java.util.*;
 
 public class ApiRunner {
@@ -22,6 +25,7 @@ public class ApiRunner {
         File input = new File(args[0]);
         List<File> jsonFiles = new ArrayList<>();
 
+        // validate input type . It should json file or complete directory with list of json files
         if(input.isFile() && input.getName().endsWith(".json")) {
             jsonFiles.add(input);
         } else if(input.isDirectory()) {
@@ -33,17 +37,17 @@ public class ApiRunner {
             System.out.println("Invalid input :" +args[0]);
             System.exit(1);
         }
-        doOperation(jsonFiles);
+        jsonComparison(jsonFiles);
 
     }
 
-    private static void doOperation(List<File> jsonFiles) throws IOException {
+    private static void jsonComparison(List<File> jsonFiles) throws IOException {
 
         ObjectMapper mapper = new ObjectMapper();
         RestTemplate restTemplate = new RestTemplate();
 
         for(File jsonFile : jsonFiles) {
-            System.out.println("\n Processing file - " + jsonFile.getName() +" ...");
+            System.out.println("Processing file - " + jsonFile.getName() +" ...");
             InputStream inputStream = new FileInputStream(jsonFile);
             JsonNode root = mapper.readTree(inputStream);
 
@@ -65,7 +69,7 @@ public class ApiRunner {
             HttpEntity<String> entity = new HttpEntity<>(headers);
             ResponseEntity<String> responseEntity = null;
 
-            // Check request type
+            // Check request method type
             if("GET".equalsIgnoreCase(method)) {
                 responseEntity = restTemplate.exchange(url, HttpMethod.GET, entity, String.class);
             }
@@ -77,14 +81,31 @@ public class ApiRunner {
             JsonNode expectedResponse = root.path("testcase").path("expected");
 
             // Compare with zjsonpatch
-            JsonNode diff = JsonDiff.asJson(expectedResponse, actualResponse);
+            JsonNode patch = JsonDiff.asJson(expectedResponse, actualResponse);
 
-            if (diff.isEmpty()) {
-                System.out.println(" API response matches expected data.");
+            String testCaseName = jsonFile.getName();
+            StringBuilder reportBuilder = new StringBuilder();
+            reportBuilder.append("=========").append(testCaseName).append("========\n");
+
+            if (patch.isEmpty()) {
+                reportBuilder.append("no Difference Found.\n");
             } else {
-                System.out.println(" Differences found:");
-                System.out.println(diff.toPrettyString());
+                for(JsonNode diff : patch) {
+                    String op = diff.get("op").asText();
+                    String path = diff.get("path").asText();
+                    reportBuilder.append("Operation: ").append(op).append(" | Path :").append(path);
+
+                    if(diff.has("from")) {
+                        reportBuilder.append(" | From ").append(diff.get("from").asText());
+                    }
+                    reportBuilder.append("\n");
+                }
             }
+            reportBuilder.append("\n");
+            Files.createDirectories(Paths.get("target"));
+            Files.write(Paths.get("target/report.txt"),
+            reportBuilder.toString().getBytes(), StandardOpenOption.CREATE,StandardOpenOption.APPEND);
+
         }
     }
 }
