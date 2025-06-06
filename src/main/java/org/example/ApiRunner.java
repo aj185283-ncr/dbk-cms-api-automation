@@ -98,6 +98,9 @@ public class ApiRunner {
                     if(diff.has("from")) {
                         reportBuilder.append(" | From ").append(diff.get("from").asText());
                     }
+                     if(diff.has("value")) {
+                        reportBuilder.append(" | Value - ").append(diff.get("value").asText());
+                    }
                     reportBuilder.append("\n");
                 }
             }
