@@ -114,19 +114,6 @@ public class ApiRunner {
                         }
                         default -> actual = diff.path("value").toString();
                     }
-<<<<<<< HEAD
-=======
-                     if(diff.has("value")) {
-                        reportBuilder.append(" | Value - ").append(diff.get("value").asText());
-                    }
-                    reportBuilder.append("\n");
-                }
-            }
-            reportBuilder.append("\n");
-            Files.createDirectories(Paths.get("target"));
-            Files.write(Paths.get("target/report.txt"),
-            reportBuilder.toString().getBytes(), StandardOpenOption.CREATE,StandardOpenOption.APPEND);
->>>>>>> e540e7714b869e86691bc6de874b0b40842d1ead
 
                     htmlBuilder.append("<tr>")
                             .append("<td>").append(op).append("</td>")
