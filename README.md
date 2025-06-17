@@ -4,7 +4,7 @@ JSON Comparison Tool – How to Use
 This tool helps compare two JSON files and generates a human-readable difference report. The output is saved in target/report.txt.
 ---
 Prerequisites
-Ensure Java 17+ is installed on your system.
+Ensure Java 11+ is installed on your system.
 Verify using:
 java -version
 ---
@@ -26,8 +26,7 @@ Json format :
 }
 },
 "testcase": {
-"expected": 
-
+"expected": {
 }
 }
 }
@@ -54,32 +53,3 @@ Example Output (report.txt)
 Operation: replace | Path: /name | Value: "John"
 ===== TestCase: testcase2.json =====
 No differences found.
-
-Note:
-Operation Meaning
-
-Example
-
-add :
-A value is present in the actual response but missing in expected.
-Actual has a new field like "age": 30 but expected does not.
-
-remove:
-A value is present in the expected response but missing in actual.
-Expected has "name": "John" but actual doesn't.
-
-replace:
-The value exists in both expected and actual, but values are different.
-Expected has "status": "success", actual has "status": "failed".
-
-copy:
-Rarely used; it means a value was copied from one path to another. This usually appears if copy handling is enabled (you won't see this unless you explicitly support it).
-
-move:
-A value was moved from one path to another (also rare unless enabled).
-
-test:
-Used for validation-only (not seen in diffs — more for PATCH operations).
-
- 
-
