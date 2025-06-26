@@ -1,0 +1,819 @@
+{
+  "request": {
+    "method": "GET",
+    "url": "http://cms-main-qal1-wug02.qal.int.dbk.ncr.com/v1/fis/00016/fiCustomers/92be73b5138e11f0a04e42010a31a0b6/bmaconfig",
+    "headers": {
+      "accept": "application/json",
+      "accept-language": "en",
+      "authorization": "OAuth",
+      "cache-control": "no-cache",
+      "intuit_appid": "AndroidBankingApp",
+      "intuit_ifs_clientappcode": "ANDRD",
+      "intuit_offeringid": "AndroidBankingApp",
+      "intuit_originatingip": "127.0.0.1",
+      "intuit_tid": "0cc48e12-ed3a-4b87-a4cf-35cf3c407720",
+      "postman-token": "bc223fad-a9bf-a81b-ea12-b34449150829",
+      "user-agent": "0516/6.5.1.0 BundleID/com.ifs.mobilebanking.fiid0516 BundleDeviceFamily/AndroidPhone,AndroidTablet (sdk_gphone_x86; ranchu; Android SDK built for x86; Android 10 API Level 29)",
+      "di_alt_cred_id": "F1FBD1CB712F71D9E053C0A011AC945D"
+    }
+  },
+  "testcase": {
+    "expected": {
+      "rdc": {
+        "accountTypes": [
+          "CHECKING",
+          "SAVINGS"
+        ],
+        "endorsementInstructions": {
+          "zh_TW": "RDC endorsement instruction in chinese",
+          "en_US": "RDC endorsement instruction in english. Is it coming like this? After update",
+          "es_ES": "This is RDC endorsement instruction in spainsh"
+        },
+        "successMessage": {
+          "zh_TW": "This is RDC success message in chinese",
+          "en_US": "This is RDC success message in english. Is it coming like this?",
+          "es_ES": "RDC success message in spainsh"
+        },
+        "accountMap": {
+          "vertifi": {
+            "business": "{   \n  \"0\": \"11\",  \n   \"1\": \"12\",   \n  \"1025\": \"13\",   \n  \"128\": \"13\",   \n  \"2\": \"11\",   \n  \"256\": \"13\",  \n   \"32\": \"13\",   \n  \"512\": \"15\",  \n   \"513\": \"15\",  \n   \"64\": \"14\" \n}"
+          }
+        },
+        "vertifiCheckDepositTutorialEnabled": true,
+        "newVertifiMultiCheckEnabled": "true",
+        "newVertifiMemoFieldEnabled": "true"
+      },
+      "transfer": {
+        "loanOverpayment": {
+          "enabled": true,
+          "overpaymentOptionsByAccountType": {
+            "286": 143,
+            "276": 4,
+            "266": 4,
+            "256": 4,
+            "1026": 4,
+            "148": 4,
+            "1024": 4,
+            "138": 12,
+            "128": 255
+          }
+        },
+        "cutoffEnabled": false,
+        "cutoffTime": "{ \"cutoffTimeConfigs\": [ { \"days\": [\"Monday\",\"Tuesday\",\"Wednesday\",\"Thursday\",\"Friday\"], \"startTimeInPT\": \"08:00\", \"durationInMinutes\": 120 } ] }",
+        "cutoffMessage": {
+          "zh_TW": "This system is currently undergoing routine maintenance, please check back after ${HH:mm} hours",
+          "en_US": "This system is currently undergoing routine maintenance, please check back after ${HH:mm} hours",
+          "es_ES": "This system is currently undergoing routine maintenance, please check back after ${HH:mm} hours"
+        },
+        "displayCalculatedLoanPayoff": true,
+        "memo": {
+          "enabled": true,
+          "scheduledEnabled": true,
+          "validators": [
+            {
+              "pattern": "^[a-zA-Z0-9-)(.$ %=+]*$"
+            },
+            {
+              "pattern": "^[a-zA-Z0-9\\)\\(\\$\\-\\?\\@#\\!%&_;~\\|\\=\\+/\\. ]*$"
+            },
+            {
+              "pattern": "^.{0,100}$"
+            },
+            {
+              "pattern": "^(?!.*(__)).+"
+            }
+          ]
+        },
+        "scheduledRecurringTransfers": {
+          "enabled": true,
+          "shouldVerifyFees": false,
+          "frequencies": [
+            "weekly",
+            "biweekly",
+            "twicemonthly",
+            "monthly",
+            "quarterly",
+            "semiannually",
+            "annually"
+          ]
+        },
+        "intraFI": {
+          "enabled": false
+        }
+      },
+      "alerts": {
+        "default": [
+          "LOWBAL",
+          "PERBAL",
+          "LRGDPST",
+          "LRGWDRWL"
+        ],
+        "alertsByAccountType": {
+          "1": [
+            "CHECKCLR"
+          ],
+          "2": [
+            "CHECKCLR"
+          ]
+        },
+        "alertsByAccountCategory": {
+          "LOAN": [
+            "PAYDUE"
+          ],
+          "INVESTMENT": [
+            "MATURE"
+          ],
+          "TIERED_LOAN": [
+            "PAYDUE"
+          ],
+          "DEPOSIT": [
+            "HIGHBAL",
+            "LOWBAL",
+            "LRGDPST",
+            "LRGWDRWL",
+            "PERBAL",
+            "PRSNL"
+          ]
+        }
+      },
+      "accounts": {
+        "showLoanAccountDetails": true,
+        "currentAmountDueLabel": {
+          "zh_TW": "當前應付金額00016",
+          "en_US": "Current amount due00016",
+          "es_ES": "Actual importe a pagar00016"
+        },
+        "nextDueDateLabel": {
+          "zh_TW": "下一個到期日00016",
+          "en_US": "Next due date00016",
+          "es_ES": "Fecha de vencimiento Siguiente00016"
+        },
+        "pastDueAmountDateLabel": {
+          "zh_TW": "逾期金額",
+          "en_US": "Past due amount as of",
+          "es_ES": "Monto vencido al"
+        },
+        "pastDueAmountLabel": {
+          "zh_TW": "逾期金額",
+          "en_US": "Past due amount",
+          "es_ES": "Pago atrasado"
+        },
+        "payoffDateLabel": {
+          "zh_TW": "順利通過",
+          "en_US": "Good through",
+          "es_ES": "Bueno a traves de"
+        },
+        "showCashAdvanceAmounts": true,
+        "cashAdvanceLimitLabel": {
+          "zh_TW": "Cash advance limit",
+          "en_US": "Cash advance limit",
+          "es_ES": "Cash advance limit"
+        },
+        "availableCashAdvanceLabel": {
+          "zh_TW": "Available cash advance",
+          "en_US": "Available cash advance",
+          "es_ES": "Available cash advance"
+        },
+        "showPastDue": true,
+        "showPastDueWarningIcon": true,
+        "displayCalculatedLoanPayoff": true,
+        "displayUnappliedFundsBalance": true,
+        "checkImagesAllowedAccountType": [
+          "1",
+          "2"
+        ],
+        "transactionPrefix": true,
+        "backgroundImage": {
+          "url": "https://qal.dbk.ncr.com/images/00016/media/capital_one_(10)-i0MTz.png"
+        },
+        "headerIconColor": {
+          "srgb": "0.007843138 0.20392157 0.49803922"
+        },
+        "headerBackgroundColor": {
+          "srgb": "0.6901961 0.7921569 0.9372549"
+        },
+        "headerLogoImage": {
+          "url": "https://qal.dbk.ncr.com/images/00016/media/capital_one_(13)-w89mV.png"
+        }
+      },
+      "fiservZelle": {
+        "applicationName": "DI0518",
+        "baseURL": "https://certtransfers.fta.cashedge.com/popnet/faces/loginServlet",
+        "institutionId": "88850179",
+        "product": "zelle",
+        "stepUpUrl": "https://www.iqa016.com/auth-olb/live/v1/mobile?appcode=StepUp&forAppCode=Zelle&mobileRedirect=true"
+      },
+      "popio": {
+        "displayBanner": false,
+        "displayDropDown": false
+      },
+      "dynatrace": {
+        "enabled": "true"
+      },
+      "settings": {
+        "mySettings": {
+          "enabled": true,
+          "url": "https://www.iqa016.com/auth-olb/live/v1/mobile?appcode=MySettings",
+          "label": {
+            "zh_TW": "我的設定",
+            "fr_CA": "Mes paramètres",
+            "en_US": "My Settings",
+            "es_ES": "Mis Parámetros"
+          }
+        },
+        "modernAccountPreferences": {
+          "url": "https://www.iqa016.com/auth-olb/live/v1/mobile?appcode=NxgAccountPreferences"
+        }
+      },
+      "apx": {
+        "authentication": {
+          "enabled": true,
+          "totp": {
+            "enabled": true
+          },
+          "stepUpAuthentication": {
+            "transfer": {
+              "path": "https://www.iqa016.com/auth-olb/live/v1/mobile?appcode=StepUp&forAppCode=Transfer"
+            }
+          }
+        }
+      },
+      "apigee": {
+        "applicationToken": "UG9lUG1tTVROVU4yUEd1dXVNMUh3Z1hzTUw0SUV4bVY6YXB0RjRPbUp0WGFGOTFvSA==",
+        "mcwToken": "aDJnU0xHenRXNHpQVmJpRXhNaHc4Z3ZNaWxEeWhBcEs6MmlaTnVna2NCdkF3aGZJdw==",
+        "oauth2AuthToken": "MjZHUUV4TDFjVk10cTlwTDhHNjVxOU5HZ0R5SG5HaU12Z25wTGQ5WWJiaUs1ekMwOjZTQ0F6UEJBaDBiOVZRZG5oUkpSaGxmS3AxNXFlQURXanJjelR0T0ZoWWxBWWRNZnhjdnVWNnFDdEZiSUhCdUs=",
+        "bffApigeeToken": "ZTlmMDA5Y2JlYTcyNDIyYjljZDliMmViNGU4NWZjZmY6ZmNlN2FjZTBlMjIwNGVmMjkzY2ZkYmQxMzgwYWUzMTY=",
+        "candescentBffApigeeToken": "WjR1c2hBam1BQm0yTDc1elJMRjlXaXNBM3d6MnNzdWM0TXUyNjM2Z0JRcngxY0F0OjB1UENZWnVreU0xd0wzaWZ5c3FrUkR5QlNtR2ZPNko2YTBUUWUzZVZwT0FmV084amNPT2dZTG9RN0l5RWdYOGM="
+      },
+      "navigation": {
+        "links": [
+          {
+            "id": "MyAccounts.Widget",
+            "type": "STANDARD",
+            "label": {
+              "en_US": "My Accounts"
+            },
+            "icon": "https://qal.dbk.ncr.com/images/dbk/icons/accounts.png",
+            "isQuickAction": false
+          },
+          {
+            "id": "BBManageCheckPositivePay.Page",
+            "type": "STANDARD",
+            "label": {
+              "en_US": "Stop pay"
+            },
+            "icon": "https://qal.dbk.ncr.com/images/dbk/icons/achpositivepay.png",
+            "isQuickAction": false
+          },
+          {
+            "id": "BBManageRdcSSO.Link",
+            "type": "STANDARD",
+            "label": {
+              "en_US": "Check deposit"
+            },
+            "icon": "https://qal.dbk.ncr.com/images/dbk/icons/checkdeposit.png",
+            "speedBumpText": "Test Speedbump Check Deposit",
+            "isQuickAction": false
+          },
+          {
+            "id": "BBApproval.Widget",
+            "type": "STANDARD",
+            "label": {
+              "en_US": "Approvals"
+            },
+            "icon": "https://qal.dbk.ncr.com/images/dbk/icons/approval.png",
+            "isQuickAction": false
+          },
+          {
+            "id": "52facaed-ae58-4130-b50a-447754f6814c",
+            "type": "SSO",
+            "label": {
+              "en_US": "MM Landing"
+            },
+            "icon": "https://qal.dbk.ncr.com/images/dbk/icons/sso.png",
+            "url": "https://www.iqa016.com/mm-ui/live/templates/",
+            "browserType": "WebView",
+            "isQuickAction": false
+          },
+          {
+            "id": "BBManageCheckPositivePay.Page",
+            "type": "STANDARD",
+            "label": {
+              "en_US": "stop pay"
+            },
+            "icon": "https://qal.dbk.ncr.com/images/dbk/icons/achpositivepay.png",
+            "isQuickAction": false
+          },
+          {
+            "id": "BBManageRdcSSO.Link",
+            "type": "STANDARD",
+            "label": {
+              "en_US": "Transfers1"
+            },
+            "icon": "https://qal.dbk.ncr.com/images/dbk/icons/checkdeposit.png",
+            "speedBumpText": "Test Speedbump Check Deposit",
+            "isQuickAction": false
+          },
+          {
+            "id": "Alerts.UI",
+            "type": "STANDARD",
+            "label": {
+              "en_US": "Alerts-newLongNameLongName"
+            },
+            "icon": "https://qal.dbk.ncr.com/images/dbk/icons/messages.png",
+            "isQuickAction": false
+          },
+          {
+            "id": "BBManageRdcSSO.Link",
+            "type": "STANDARD",
+            "label": {
+              "en_US": "Nrdc"
+            },
+            "icon": "https://qal.dbk.ncr.com/images/dbk/icons/checkdeposit.png",
+            "speedBumpText": "Test Speedbump Check Deposit",
+            "isQuickAction": false
+          },
+          {
+            "id": "Transfers.UI",
+            "type": "STANDARD",
+            "label": {
+              "en_US": "Transfer",
+              "es_ES": "tr-sp",
+              "zh_TW": "tr-ch",
+              "fr_CA": "tr-fr"
+            },
+            "icon": "https://qal.dbk.ncr.com/images/dbk/icons/transfers.png",
+            "speedBumpText": "Standard This is a FDIC speed bump for business Transfer!",
+            "isQuickAction": false
+          },
+          {
+            "id": "dc9ea06d-9441-4f74-8c15-0b2b33cd8044",
+            "type": "SSO",
+            "label": {
+              "en_US": "MM"
+            },
+            "icon": "https://qal.dbk.ncr.com/images/dbk/icons/sso.png",
+            "url": "https://www.iqa016.com/mm-ui/live/landing/",
+            "browserType": "WebView",
+            "isQuickAction": false
+          },
+          {
+            "id": "MySettings.Page",
+            "type": "STANDARD",
+            "label": {
+              "en_US": "My profile"
+            },
+            "icon": "https://qal.dbk.ncr.com/images/dbk/icons/settings.png",
+            "url": "https://www.iqa016.com/auth-olb/live/v1/mobile?appcode=MySettings",
+            "isQuickAction": false
+          },
+          {
+            "id": "BBDecisionCheckPositivePay.Page",
+            "type": "STANDARD",
+            "label": {
+              "en_US": "Manage Check Exceptions"
+            },
+            "icon": "https://qal.dbk.ncr.com/images/dbk/icons/achpositivepay.png",
+            "isQuickAction": false
+          },
+          {
+            "id": "Transfers.UI",
+            "type": "STANDARD",
+            "label": {
+              "en_US": "Transfer"
+            },
+            "icon": "https://qal.dbk.ncr.com/images/dbk/icons/transfers.png",
+            "speedBumpText": "Standard This is a FDIC speed bump for business Transfer!",
+            "isQuickAction": false
+          },
+          {
+            "id": "BBApproval.Widget",
+            "type": "STANDARD",
+            "label": {
+              "en_US": "Approvals"
+            },
+            "icon": "https://qal.dbk.ncr.com/images/dbk/icons/approval.png",
+            "isQuickAction": false
+          },
+          {
+            "id": "f1ac1265-e1bb-43ae-a7ea-b8f31ced63ba",
+            "type": "MENU_GROUP",
+            "label": {
+              "en_US": "New Menu Group1"
+            },
+            "icon": "https://qal.dbk.ncr.com/images/dbk/icons/header.png",
+            "itemIds": [
+              "bfb4ccfa-cac0-4607-81a2-84742b66be19"
+            ],
+            "isQuickAction": false
+          },
+          {
+            "id": "Locations",
+            "type": "STANDARD",
+            "label": {
+              "en_US": "Locations"
+            },
+            "icon": "https://qal.dbk.ncr.com/images/dbk/icons/locations.png",
+            "isQuickAction": false
+          },
+          {
+            "id": "a2c830a9-74e3-49b4-8b65-bf1451659f56",
+            "type": "MENU_GROUP",
+            "label": {
+              "en_US": "New Menu Group"
+            },
+            "icon": "https://qal.dbk.ncr.com/images/dbk/icons/header.png",
+            "itemIds": [
+              "BBManageRdcSSO.Link",
+              "Transfers.UI",
+              "BBApproval.Widget"
+            ],
+            "isQuickAction": false
+          },
+          {
+            "id": "BBOnlineStatementsSSO.Link",
+            "type": "SSO",
+            "label": {
+              "en_US": "IOLS",
+              "es_ES": "iols -sp",
+              "zh_TW": "iols -ch",
+              "fr_CA": "iols-FR"
+            },
+            "icon": "https://qal.dbk.ncr.com/images/dbk/icons/sso.png",
+            "url": "https://www.iqa016.com/auth-olb/live/v1/mobile?appcode=Online+Statements",
+            "browserType": "WebView",
+            "isQuickAction": false
+          },
+          {
+            "id": "642d6ec5-a268-47bd-a537-851316834b42",
+            "type": "SSO",
+            "label": {
+              "en_US": "OnlineForms_BB_visa_travel"
+            },
+            "icon": "https://qal.dbk.ncr.com/images/dbk/icons/sso.png",
+            "url": "https://www.iqa016.com/ofs/live/forms?form=bb_cardholder_dispute",
+            "browserType": "WebView",
+            "isQuickAction": false
+          },
+          {
+            "id": "BBEntitlements.Page",
+            "type": "STANDARD",
+            "label": {
+              "en_US": "User Access",
+              "zh_TW": "2"
+            },
+            "icon": "https://qal.dbk.ncr.com/images/00016/media/sbi_transparent-KdFnh.png",
+            "isQuickAction": false
+          },
+          {
+            "id": "Transfers.UI",
+            "type": "STANDARD",
+            "label": {
+              "en_US": "Transfers",
+              "es_ES": "Transfers"
+            },
+            "icon": "https://qal.dbk.ncr.com/images/dbk/icons/transfers.png",
+            "speedBumpText": "Standard This is a FDIC speed bump for business Transfer!",
+            "isQuickAction": false
+          },
+          {
+            "id": "458368d0-88da-48c6-98d4-4b4115434116",
+            "type": "SSO",
+            "label": {
+              "en_US": "Link Live BB Global"
+            },
+            "icon": "https://qal.dbk.ncr.com/images/dbk/icons/sso.png",
+            "url": "https://www.iqa016.com/fmis/live/sso/usp/usp.action?app_code=V5427-SAML_CHAT&product_code=SAML&externAppCode=LinkLiveBBSSO.Link&ping=/usp-core/app/launch&AUTO_LOAD=TRUE",
+            "browserType": "WebView",
+            "isQuickAction": false
+          },
+          {
+            "id": "BBZelleSSO.Link",
+            "type": "SSO",
+            "label": {
+              "en_US": "MM FIS ZELLE"
+            },
+            "icon": "https://qal.dbk.ncr.com/images/dbk/icons/sso.png",
+            "url": "https://www.iqa016.com/mm-sso-service/live/mm/sso/v1/vendor/MM_FIS_ZELLE_BB/mobile",
+            "browserType": "WebView",
+            "sdks": [
+              {
+                "enabled": true,
+                "id": "FISDigitalPayments",
+                "whitelistDomains": [
+                  "epayments-epayui-uat-1.money-movement.com"
+                ]
+              }
+            ],
+            "speedBumpText": "SSO link Speed bump msg test",
+            "isQuickAction": false
+          },
+          {
+            "id": "BBPaymentusSSO.Link",
+            "type": "SSO",
+            "label": {
+              "en_US": "Paymentus"
+            },
+            "icon": "https://qal.dbk.ncr.com/images/dbk/icons/sso.png",
+            "url": "https://www.iqa016.com/mm-sso-service/live/mm/sso/v1/vendor/MM_PAYMENTUS_BB/mobile",
+            "browserType": "WebView",
+            "isQuickAction": false
+          },
+          {
+            "id": "2054877e-82f2-4ab8-9bd3-95c9aebc28ef",
+            "type": "SSO",
+            "label": {
+              "en_US": "CardValet for Android - All User"
+            },
+            "icon": "https://qal.dbk.ncr.com/images/dbk/icons/sso.png",
+            "url": "https://play.google.com/store/apps/details?id=com.fiservcardvalet.mobile.android&externAppCode=BMAAdminUserAccessSSO.Link&product_code=DISSO",
+            "browserType": "WebView",
+            "isQuickAction": false
+          },
+          {
+            "id": "2cd7ab8c-d026-4132-a3aa-673ec4f8fe17",
+            "type": "SSO",
+            "label": {
+              "en_US": "FormDirectNav"
+            },
+            "icon": "https://qal.dbk.ncr.com/images/dbk/icons/sso.png",
+            "url": "https://www.iqa016.com/fmis/live/sso/usp/usp.action?app_code=V5472-SAML_FORMSTACK_V2&product_code=SAML&externAppCode=BBDFA.Page&ping=/usp-core/app/launch&relaystate=https://ncrtest2.formstack.com/forms/prefilltestfromgopal_ncr_copy",
+            "browserType": "WebView",
+            "isQuickAction": false
+          },
+          {
+            "id": "BBManageACHPositivePay.Page",
+            "type": "STANDARD",
+            "label": {
+              "en_US": "ACH Positive Pay"
+            },
+            "icon": "https://qal.dbk.ncr.com/images/dbk/icons/achpositivepay.png",
+            "isQuickAction": false
+          },
+          {
+            "id": "BBManageCheckPositivePay.Page",
+            "type": "STANDARD",
+            "label": {
+              "en_US": "BBManageCheckPositivePay.Page"
+            },
+            "icon": "https://qal.dbk.ncr.com/images/dbk/icons/achpositivepay.png",
+            "isQuickAction": false
+          },
+          {
+            "id": "0f7272ba-57c5-45dc-a6d2-9b551cd7c21f",
+            "type": "SSO",
+            "label": {
+              "en_US": "Tap2pay"
+            },
+            "icon": "https://qal.dbk.ncr.com/images/dbk/icons/sso.png",
+            "url": "https://www.iqa016.com/fmis/live/sso/usp/usp.action?app_code=V5422-SAML_AUTOBOOKS&amp;externAppCode=BBTapPaySSO.Link&amp;product_code=SAML&amp;ping=/usp-core/app/launch&amp;AUTO_LOAD=TRUE",
+            "browserType": "WebView",
+            "isQuickAction": false
+          },
+          {
+            "id": "bfb4ccfa-cac0-4607-81a2-84742b66be19",
+            "type": "PUBLIC",
+            "label": {
+              "en_US": "NCR"
+            },
+            "icon": "https://qal.dbk.ncr.com/images/dbk/icons/publiclink.png",
+            "url": "https://ww.ncr.com",
+            "speedBumpText": "This is custom url speedbump for ncr.com",
+            "isQuickAction": false
+          },
+          {
+            "id": "BBManageRdcSSO.Link",
+            "type": "STANDARD",
+            "label": {
+              "en_US": "RDC",
+              "es_ES": "rdc -sp",
+              "zh_TW": "rdc -ch",
+              "fr_CA": "rdc-fr"
+            },
+            "icon": "https://qal.dbk.ncr.com/images/dbk/icons/checkdeposit.png",
+            "speedBumpText": "Test Speedbump Check Deposit",
+            "isQuickAction": false
+          },
+          {
+            "id": "Transfers.UI",
+            "type": "STANDARD",
+            "label": {
+              "en_US": "Transfers"
+            },
+            "icon": "https://qal.dbk.ncr.com/images/dbk/icons/transfers.png",
+            "speedBumpText": "Standard This is a FDIC speed bump for business Transfer!",
+            "isQuickAction": false
+          },
+          {
+            "id": "BBApproval.Widget",
+            "type": "STANDARD",
+            "label": {
+              "en_US": "Approvals"
+            },
+            "icon": "https://qal.dbk.ncr.com/images/dbk/icons/approval.png",
+            "isQuickAction": false
+          },
+          {
+            "id": "65dc155b-f464-411a-aee1-74eb8f8246c1",
+            "type": "PUBLIC",
+            "label": {
+              "en_US": "Email us now!"
+            },
+            "url": "mailto:fh250052@ncrvoyix.com,kc185198@ncr.com,vp250170@ncr.com,mohan.venkataswamy@ncr.com,julie.kemp@ncr.com,neha.mittal2@ncr.com,balaji.nagaraju@ncr.com,praveen.be@ncr.com, nm185228@ncrvoyix.com,sreethar.saravanan@candescent.com",
+            "isQuickAction": false
+          },
+          {
+            "id": "4d4edf5f-bb08-4564-a425-5f521936c171",
+            "type": "PUBLIC",
+            "label": {
+              "en_US": "Call us now!"
+            },
+            "url": "tel:650-944-7896",
+            "isQuickAction": false
+          },
+          {
+            "id": "178b0cf2-a675-492e-b80a-0559dbe2fc8b",
+            "type": "PUBLIC",
+            "label": {
+              "en_US": "Visit us Online!!"
+            },
+            "url": "https://www.iqa016.com/tob/live/usp-core/app/login/consumer",
+            "isQuickAction": false
+          },
+          {
+            "id": "ebf08bb5-1f72-4760-88f0-d461e8ea21b2",
+            "type": "PUBLIC",
+            "label": {
+              "en_US": "View policy on website"
+            },
+            "url": "https://www.digitalinsight.com/privacy.html",
+            "isQuickAction": false
+          },
+          {
+            "id": "e567ac19-1aa0-47c6-b4c5-c8a0e8c2bc30",
+            "type": "PUBLIC",
+            "label": {
+              "en_US": "Nearby Locations"
+            },
+            "url": "https://atmlocator.wave2.io?fiid=00016&mobileapp=1",
+            "isQuickAction": false
+          }
+        ]
+      },
+      "mobilePages": [
+        {
+          "id": "af177979-e994-4b4c-af95-67a1c4494673",
+          "name": "More",
+          "type": "MORE_PAGE",
+          "widgets": [
+            {
+              "id": "cc03ae36-c3d9-4b3b-8550-4a8b74e1d454",
+              "name": "Navigation List",
+              "type": "NAVIGATION_LIST",
+              "sortOrder": 0,
+              "properties": [
+                {
+                  "id": "fabb4453-29ff-4562-8059-9ffbf0ac789a",
+                  "name": "iconOption",
+                  "type": "TEXT",
+                  "sortOrder": 0,
+                  "value": "ALL",
+                  "valueLocale": {
+                    "en_US": "ALL"
+                  }
+                },
+                {
+                  "id": "f8b89826-94ac-40b6-8b52-a5908137ad8d",
+                  "name": "layoutType",
+                  "type": "TEXT",
+                  "sortOrder": 1,
+                  "value": "ONE_COLUMN",
+                  "valueLocale": {
+                    "en_US": "ONE_COLUMN"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "5c734060-b856-4656-a778-03c03349df3c",
+              "name": "Note",
+              "type": "NOTE",
+              "sortOrder": 1,
+              "properties": [
+                {
+                  "id": "e8455362-ce40-494a-8496-02e7b13e1c4a",
+                  "name": "title",
+                  "type": "TEXT",
+                  "sortOrder": 0,
+                  "value": "Custom Text test1",
+                  "valueLocale": {
+                    "en_US": "Custom Text test1"
+                  }
+                },
+                {
+                  "id": "24e11c1c-0eea-4013-b877-45dc3f126489",
+                  "name": "description",
+                  "type": "TEXT",
+                  "sortOrder": 1,
+                  "value": "Custom text Desc",
+                  "valueLocale": {
+                    "en_US": "Custom text Desc"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "832527f4-7b95-475c-978b-797864a34c2a",
+              "name": "Note",
+              "type": "NOTE",
+              "sortOrder": 2,
+              "properties": [
+                {
+                  "id": "5bb6da89-7769-4490-8f74-c0e7f24de2e6",
+                  "name": "title",
+                  "type": "TEXT",
+                  "sortOrder": 0,
+                  "valueLocale": {}
+                },
+                {
+                  "id": "07771777-7d0a-4040-ad1f-653c251d8aac",
+                  "name": "description",
+                  "type": "TEXT",
+                  "sortOrder": 1,
+                  "valueLocale": {}
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "HOME_PAGE",
+          "type": "UNKNOWN",
+          "widgets": []
+        }
+      ],
+      "branding": {
+        "secondaryTextColor": {
+          "srgb": "0.0 0.0 0.0"
+        },
+        "headerTextColor": {
+          "srgb": "1.0 1.0 1.0"
+        },
+        "headerColor": {
+          "srgb": "0.1882353 0.22745098 0.8862745"
+        },
+        "buttonIsSecondaryColor": false,
+        "shadingTheme": "NONE",
+        "primaryColor": {
+          "srgb": "0.1882353 0.22745098 0.8862745"
+        },
+        "primaryTextColor": {
+          "srgb": "1.0 1.0 1.0"
+        },
+        "secondaryColor": {
+          "srgb": "0.8235294 0.40784314 0.7529412"
+        },
+        "sectionHeaderIsSecondaryColor": false
+      },
+      "login": {
+        "image": {
+          "url": ""
+        }
+      },
+      "modernUI": {
+        "modernEnrollmentOptionMobile": "AUTO_ENROLL"
+      },
+      "profileStatus": [
+        {
+          "type": "ESIGN",
+          "status": {
+            "valid": true,
+            "reason": "NOT_REQUIRED"
+          }
+        },
+        {
+          "type": "HOST",
+          "status": {
+            "valid": true
+          }
+        },
+        {
+          "type": "ALTERNATE_CREDENTIAL",
+          "status": {
+            "valid": false,
+            "reason": "NOT_FOUND"
+          }
+        },
+        {
+          "type": "PASSWORD_EXPIRATION",
+          "status": {
+            "valid": false,
+            "reason": "NOT_CONFIGURED"
+          }
+        }
+      ]
+    }
+  }
+  }
+
+

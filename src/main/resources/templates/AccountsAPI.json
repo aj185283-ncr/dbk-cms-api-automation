@@ -1,0 +1,933 @@
+{
+  "request": {
+    "method": "GET",
+    "url": "http://cms-main-qal1-wug02.qal.int.dbk.ncr.com/v3/fis/00516/fiCustomers/aa8a93d901064a26a5444c378de75a59/accounts?operation=filtered&fields=nextPaymentAmount%2CnickName%2CnextPaymentDate%2Cid%2CfiId%2Ccategory%2CaccountType%2Cdescription%2CdisplayAccountNumber%2Cbalance%2CdisplayFlag%2Csummary%2CquickBalanceEnabled%2CdisplayPrimaryMemberNumber",
+    "headers": {
+      "accept": "application/json",
+      "accept-language": "en",
+      "authorization": "OAuth",
+      "cache-control": "no-cache",
+      "intuit_appid": "AndroidBankingApp",
+      "intuit_ifs_clientappcode": "ANDRD",
+      "intuit_offeringid": "AndroidBankingApp",
+      "intuit_originatingip": "127.0.0.1",
+      "intuit_tid": "0cc48e12-ed3a-4b87-a4cf-35cf3c407720",
+      "postman-token": "bc223fad-a9bf-a81b-ea12-b34449150829",
+      "user-agent": "0516/6.5.1.0 BundleID/com.ifs.mobilebanking.fiid0516 BundleDeviceFamily/AndroidPhone,AndroidTablet (sdk_gphone_x86; ranchu; Android SDK built for x86; Android 10 API Level 29)",
+      "di_alt_cred_id": "F1FBD1CB712F71D9E053C0A011AC945D"
+    }
+  },
+  "testcase": {
+    "expected": {
+      "account": [
+        {
+          "id": "d3XlGnYR06hizNVfcOMORXBHqDm6MZZP2-NUwGsgMpk",
+          "fiId": "00516",
+          "description": "Personal Checking",
+          "nickName": "Personal Checking",
+          "displayAccountNumber": "XXXX019022",
+          "category": "DEPOSIT",
+          "accountType": "CHECKING",
+          "balance": {
+            "currentBalance": {
+              "amount": 5200.00
+            },
+            "availableBalance": {
+              "amount": 5500.00
+            },
+            "lastStatementBalance": {
+              "amount": 987.66
+            }
+          },
+          "displayFlag": {
+            "summary": true,
+            "transferFrom": true,
+            "transferTo": true,
+            "onlineStatementViewEnabled": true,
+            "isHistoryEnabled": true,
+            "isHistoryEntitled": true
+          }
+        },
+        {
+          "id": "2ax-ybqCuvspKSGD1imdLbbBCKGZVfUzJt_UVRtE4NM",
+          "fiId": "00516",
+          "description": "Personal Savings",
+          "nickName": "Personal Savings",
+          "displayAccountNumber": "XXXX001314",
+          "category": "DEPOSIT",
+          "accountType": "SAVINGS",
+          "balance": {
+            "currentBalance": {
+              "amount": 25525.00
+            },
+            "availableBalance": {
+              "amount": 25500.00
+            },
+            "lastStatementBalance": {
+              "amount": 987.66
+            }
+          },
+          "displayFlag": {
+            "summary": true,
+            "transferFrom": true,
+            "transferTo": true,
+            "onlineStatementViewEnabled": true,
+            "isHistoryEnabled": true,
+            "isHistoryEntitled": true
+          }
+        },
+        {
+          "id": "xFq4tQu8qfIpf0hXntQHUJEiqZYrPciUM5RcxpWbI2M",
+          "fiId": "00516",
+          "description": "Business Checking",
+          "nickName": "Business Checking",
+          "displayAccountNumber": "XXXX1315",
+          "category": "DEPOSIT",
+          "accountType": "CHECKING",
+          "balance": {
+            "currentBalance": {
+              "amount": 5182.42
+            },
+            "availableBalance": {
+              "amount": 5130.50
+            },
+            "lastStatementBalance": {
+              "amount": 987.66
+            }
+          },
+          "displayFlag": {
+            "summary": true,
+            "transferFrom": true,
+            "transferTo": true,
+            "onlineStatementViewEnabled": true,
+            "isHistoryEnabled": true,
+            "isHistoryEntitled": true
+          }
+        },
+        {
+          "id": "62Fu3OaCMKo1AEBLgBZyPi_yizF5jX5vG_tcHr84gqU",
+          "fiId": "00516",
+          "description": "Business Savings",
+          "nickName": "Business Savings",
+          "displayAccountNumber": "XXXX19023",
+          "category": "DEPOSIT",
+          "accountType": "SAVINGS",
+          "displayPrimaryMemberNumber": "*7263",
+          "balance": {
+            "currentBalance": {
+              "amount": 52506.00
+            },
+            "availableBalance": {
+              "amount": 52456.00
+            }
+          },
+          "displayFlag": {
+            "summary": true,
+            "transferFrom": true,
+            "transferTo": true,
+            "onlineStatementViewEnabled": true,
+            "isHistoryEnabled": true,
+            "isHistoryEntitled": true
+          }
+        },
+        {
+          "id": "CFcqt91mM1L5qfx4AbbpaSNIsEk1pKTgOiu4YNsleT8",
+          "fiId": "00516",
+          "description": "Another Checking Account",
+          "nickName": "Another Checking Account",
+          "displayAccountNumber": "XXXX2114",
+          "category": "DEPOSIT",
+          "accountType": "CHECKING",
+          "balance": {
+            "currentBalance": {
+              "amount": 19.53
+            },
+            "availableBalance": {
+              "amount": 90.88
+            },
+            "lastStatementBalance": {
+              "amount": 987.66
+            }
+          },
+          "displayFlag": {
+            "summary": true,
+            "transferFrom": true,
+            "transferTo": false,
+            "onlineStatementViewEnabled": true,
+            "isHistoryEnabled": true,
+            "isHistoryEntitled": true
+          }
+        },
+        {
+          "id": "kV1JauGJTUobryFEj95t5r9tPT0uAMz-WTTiuEA7UA0",
+          "fiId": "00516",
+          "description": "Money Market",
+          "nickName": "Money Market",
+          "displayAccountNumber": "XXXX242599",
+          "category": "DEPOSIT",
+          "accountType": "MONEY_MARKET",
+          "balance": {
+            "currentBalance": {
+              "amount": 42220.02
+            },
+            "availableBalance": {
+              "amount": 4322.35
+            }
+          },
+          "displayFlag": {
+            "summary": true,
+            "transferFrom": true,
+            "transferTo": true,
+            "onlineStatementViewEnabled": true,
+            "isHistoryEnabled": false,
+            "isHistoryEntitled": true
+          }
+        },
+        {
+          "id": "LypBmTgL5-CSk09AEKTZHIDloAwhqUWZAaWCFvYoL60",
+          "fiId": "00516",
+          "description": "Personal Checking",
+          "nickName": "Personal Checking",
+          "displayAccountNumber": "XXXX0300",
+          "category": "DEPOSIT",
+          "accountType": "CHECKING",
+          "balance": {
+            "currentBalance": {
+              "amount": 5200.00
+            },
+            "availableBalance": {
+              "amount": 5500.00
+            },
+            "lastStatementBalance": {
+              "amount": 987.66
+            }
+          },
+          "displayFlag": {
+            "summary": true,
+            "transferFrom": true,
+            "transferTo": true,
+            "onlineStatementViewEnabled": true,
+            "isHistoryEnabled": true,
+            "isHistoryEntitled": true
+          }
+        },
+        {
+          "id": "wD2O_0Qhkq1wUYmFOSGgFpTu2yAAWT8h8SPs70Bjibo",
+          "fiId": "00516",
+          "description": "DITYP 1",
+          "nickName": "DITYP 1",
+          "displayAccountNumber": "XXXX980123",
+          "category": "DEPOSIT",
+          "accountType": "CHECKING",
+          "balance": {
+            "currentBalance": {
+              "amount": 500.00
+            },
+            "availableBalance": {
+              "amount": 500.00
+            }
+          },
+          "displayFlag": {
+            "summary": true,
+            "transferFrom": true,
+            "transferTo": true,
+            "onlineStatementViewEnabled": true,
+            "isHistoryEnabled": true,
+            "isHistoryEntitled": true
+          }
+        },
+        {
+          "id": "_ffyOtPleWJTal2zYPW7CLQyn457toXwBO9dlPr5JwE",
+          "fiId": "00516",
+          "description": "ATYP 2048",
+          "nickName": "ATYP 2048",
+          "displayAccountNumber": "XXXX980001",
+          "category": "DEPOSIT",
+          "accountType": "UNKNOWN",
+          "balance": {
+            "currentBalance": {
+              "amount": 500.00
+            },
+            "availableBalance": {
+              "amount": 500.00
+            }
+          },
+          "displayFlag": {
+            "summary": true,
+            "transferFrom": true,
+            "transferTo": true,
+            "onlineStatementViewEnabled": true,
+            "isHistoryEnabled": true,
+            "isHistoryEntitled": true
+          }
+        },
+        {
+          "id": "nOOcGRQb9vijo_Sc8DGTqj446b2vMHa8PR45Q3rZnVA",
+          "fiId": "00516",
+          "description": "ATYP -1",
+          "nickName": "ATYP -1",
+          "displayAccountNumber": "XXXX980002",
+          "category": "DEPOSIT",
+          "accountType": "UNKNOWN",
+          "balance": {
+            "currentBalance": {
+              "amount": 500.00
+            },
+            "availableBalance": {
+              "amount": 500.00
+            }
+          },
+          "displayFlag": {
+            "summary": true,
+            "transferFrom": true,
+            "transferTo": true,
+            "onlineStatementViewEnabled": true,
+            "isHistoryEnabled": true,
+            "isHistoryEntitled": true
+          }
+        },
+        {
+          "id": "he4fDm4akVIwgmYgmrETgMglz17F6MSnfz0diafegHk",
+          "fiId": "00516",
+          "description": "ATYP 2069",
+          "nickName": "ATYP 2069",
+          "displayAccountNumber": "XXXX000015",
+          "category": "DEPOSIT",
+          "accountType": "CHECKING",
+          "balance": {
+            "currentBalance": {
+              "amount": 22.43
+            },
+            "availableBalance": {
+              "amount": 118.90
+            }
+          },
+          "displayFlag": {
+            "summary": true,
+            "transferFrom": true,
+            "transferTo": true,
+            "onlineStatementViewEnabled": true,
+            "isHistoryEnabled": true,
+            "isHistoryEntitled": true
+          }
+        },
+        {
+          "id": "dKs3cciZlfE8w6y5q9G6O4mCKh-IL5hCY0knh3A8xg4",
+          "fiId": "00516",
+          "description": "GCL Account_Normal",
+          "nickName": "GCL Account_Normal",
+          "displayAccountNumber": "XXXX378907",
+          "category": "DEPOSIT",
+          "accountType": "GENERAL_LEDGER_ACCOUNT",
+          "balance": {
+            "currentBalance": {
+              "amount": 500.75
+            },
+            "availableBalance": {
+              "amount": 600.75
+            }
+          },
+          "displayFlag": {
+            "summary": true,
+            "transferFrom": true,
+            "transferTo": true,
+            "onlineStatementViewEnabled": true,
+            "isHistoryEnabled": true,
+            "isHistoryEntitled": true
+          }
+        },
+        {
+          "id": "WROgTPJGk2LyjUadPoc4U9Rs3jQKjE1_v8xpKPh_aJc",
+          "fiId": "00516",
+          "description": "GCL Note_Normal",
+          "nickName": "GCL Note_Normal",
+          "displayAccountNumber": "XXXX378909",
+          "category": "DEPOSIT",
+          "accountType": "GENERAL_LEDGER_CODE",
+          "balance": {
+            "currentBalance": {
+              "amount": 500.75
+            },
+            "availableBalance": {
+              "amount": 600.75
+            }
+          },
+          "displayFlag": {
+            "summary": true,
+            "transferFrom": true,
+            "transferTo": true,
+            "onlineStatementViewEnabled": true,
+            "isHistoryEnabled": true,
+            "isHistoryEntitled": true
+          }
+        },
+        {
+          "id": "WV_taVXT8CRAJ1Pw2eH0Fx-nDn-hzvLdRSEuinFZBn0",
+          "fiId": "00516",
+          "description": "401K Account",
+          "nickName": "401K Account",
+          "displayAccountNumber": "XXXX12093",
+          "category": "INVESTMENT",
+          "accountType": "RETIREMENT_401K",
+          "balance": {
+            "currentBalance": {
+              "amount": 123583.67
+            },
+            "availableBalance": {
+              "amount": 123583.67
+            }
+          },
+          "displayFlag": {
+            "summary": true,
+            "transferFrom": false,
+            "transferTo": false,
+            "onlineStatementViewEnabled": true,
+            "isHistoryEnabled": true,
+            "isHistoryEntitled": true
+          }
+        },
+        {
+          "id": "k4nGzliEl_OljYwvqHSga4-GVGm9YNcmx23DpG6EbuM",
+          "fiId": "00516",
+          "description": "CD %%% Account",
+          "nickName": "CD %%% Account",
+          "displayAccountNumber": "XXXX12094",
+          "category": "INVESTMENT",
+          "accountType": "CERT_OF_DEPOSIT",
+          "balance": {
+            "currentBalance": {
+              "amount": 123583.67
+            },
+            "availableBalance": {
+              "amount": 123583.67
+            }
+          },
+          "displayFlag": {
+            "summary": true,
+            "transferFrom": false,
+            "transferTo": false,
+            "onlineStatementViewEnabled": true,
+            "isHistoryEnabled": true,
+            "isHistoryEntitled": true
+          }
+        },
+        {
+          "id": "w8R5idWOcSIobFwZbHinG0MyeYFGTWEpbQccF38aydY",
+          "fiId": "00516",
+          "description": "ATYP 4",
+          "nickName": "ATYP 4",
+          "displayAccountNumber": "XXXX000023",
+          "category": "INVESTMENT",
+          "accountType": "CERT_OF_DEPOSIT",
+          "balance": {
+            "currentBalance": {
+              "amount": 500.00
+            },
+            "availableBalance": {
+              "amount": 500.00
+            }
+          },
+          "displayFlag": {
+            "summary": true,
+            "transferFrom": true,
+            "transferTo": true,
+            "onlineStatementViewEnabled": true,
+            "isHistoryEnabled": true,
+            "isHistoryEntitled": true
+          }
+        },
+        {
+          "id": "kfaKIFA_jC4ZXDxucNXIH32DvNOReoY2zVojbFVI7t0",
+          "fiId": "00516",
+          "description": "ATYP 4 With RTN",
+          "nickName": "ATYP 4 With RTN",
+          "displayAccountNumber": "XXXX000024",
+          "category": "INVESTMENT",
+          "accountType": "CERT_OF_DEPOSIT",
+          "balance": {
+            "currentBalance": {
+              "amount": 500.00
+            },
+            "availableBalance": {
+              "amount": 500.00
+            }
+          },
+          "displayFlag": {
+            "summary": true,
+            "transferFrom": true,
+            "transferTo": true,
+            "onlineStatementViewEnabled": true,
+            "isHistoryEnabled": true,
+            "isHistoryEntitled": true
+          }
+        },
+        {
+          "nextPaymentAmount": {
+            "amount": 240.00
+          },
+          "nextPaymentDate": "2011-10-01-07:00",
+          "id": "wMAbxdFszM059-T8PbrYc5f0_pMPm1f3qr97qdy5MF4",
+          "fiId": "00516",
+          "description": "LOC Loan",
+          "nickName": "LOC Loan",
+          "displayAccountNumber": "XXXX15733",
+          "category": "LOAN",
+          "accountType": "LINE_OF_CREDIT_LOAN",
+          "balance": {
+            "currentBalance": {
+              "amount": 7356.21
+            },
+            "availableBalance": {
+              "amount": 3779.80
+            }
+          },
+          "displayFlag": {
+            "summary": true,
+            "transferFrom": false,
+            "transferTo": true,
+            "onlineStatementViewEnabled": true,
+            "isHistoryEnabled": true,
+            "isHistoryEntitled": true
+          }
+        },
+        {
+          "nextPaymentAmount": {
+            "amount": 9530.80
+          },
+          "nextPaymentDate": "2011-10-12-07:00",
+          "id": "OAmTGpaBf0kBgMmQeNPqmnqX_QgDFp9XzCwpWwspfUs",
+          "fiId": "00516",
+          "description": "Visa",
+          "nickName": "Visa",
+          "displayAccountNumber": "XXXX1316",
+          "category": "LOAN",
+          "accountType": "CREDIT_CARD_LOAN",
+          "balance": {
+            "currentBalance": {
+              "amount": 10320.20
+            },
+            "availableBalance": {
+              "amount": 4779.80
+            }
+          },
+          "displayFlag": {
+            "summary": true,
+            "transferFrom": false,
+            "transferTo": true,
+            "onlineStatementViewEnabled": true,
+            "isHistoryEnabled": true,
+            "isHistoryEntitled": true
+          }
+        },
+        {
+          "nextPaymentAmount": {
+            "amount": 2987.88
+          },
+          "nextPaymentDate": "2011-10-05-07:00",
+          "id": "SkotVRemmfo85oeKZJNI3YEtLZgCYTQLbLRvC4HQreM",
+          "fiId": "00516",
+          "description": "MasterCard",
+          "nickName": "MasterCard",
+          "displayAccountNumber": "XXXX1317",
+          "category": "LOAN",
+          "accountType": "CREDIT_CARD_LOAN",
+          "balance": {
+            "currentBalance": {
+              "amount": 2984.21
+            },
+            "availableBalance": {
+              "amount": 5279.80
+            }
+          },
+          "displayFlag": {
+            "summary": true,
+            "transferFrom": false,
+            "transferTo": true,
+            "onlineStatementViewEnabled": true,
+            "isHistoryEnabled": true,
+            "isHistoryEntitled": true
+          }
+        },
+        {
+          "nextPaymentAmount": {
+            "amount": 240.00
+          },
+          "nextPaymentDate": "2011-10-01-07:00",
+          "id": "2A8zFyon7SJ5ZbL9E0kxT13qiz6g-0n9K3TlC7Bw4B0",
+          "fiId": "00516",
+          "description": "Auto Loan",
+          "nickName": "Auto Loan",
+          "displayAccountNumber": "XXXX15633",
+          "category": "LOAN",
+          "accountType": "INSTALLMENT_LOAN",
+          "balance": {
+            "currentBalance": {
+              "amount": 7356.21
+            },
+            "availableBalance": {
+              "amount": 3779.80
+            }
+          },
+          "displayFlag": {
+            "summary": true,
+            "transferFrom": false,
+            "transferTo": true,
+            "onlineStatementViewEnabled": true,
+            "isHistoryEnabled": true,
+            "isHistoryEntitled": true
+          }
+        },
+        {
+          "nextPaymentAmount": {
+            "amount": 240.00
+          },
+          "nextPaymentDate": "2011-10-01-07:00",
+          "id": "bkjCS0GEUfUqBKqRQ0-G9rxwme473h7RTZab2ZtzfYg",
+          "fiId": "00516",
+          "description": "Auto Loan",
+          "nickName": "Auto Loan",
+          "displayAccountNumber": "XXXX0002",
+          "category": "LOAN",
+          "accountType": "INSTALLMENT_LOAN",
+          "balance": {
+            "currentBalance": {
+              "amount": 7356.21
+            },
+            "availableBalance": {
+              "amount": 3779.80
+            }
+          },
+          "displayFlag": {
+            "summary": true,
+            "transferFrom": false,
+            "transferTo": true,
+            "onlineStatementViewEnabled": true,
+            "isHistoryEnabled": true,
+            "isHistoryEntitled": true
+          }
+        },
+        {
+          "nextPaymentAmount": {
+            "amount": 240.00
+          },
+          "nextPaymentDate": "2011-10-01-07:00",
+          "id": "wigtH1wNKjgFocx7WQvWQpNXeT0AEu0O_MRTDzkSSEM",
+          "fiId": "00516",
+          "description": "Auto Loan",
+          "nickName": "Auto Loan",
+          "displayAccountNumber": "XXXX5000",
+          "category": "LOAN",
+          "accountType": "INSTALLMENT_LOAN",
+          "balance": {
+            "currentBalance": {
+              "amount": 7356.21
+            },
+            "availableBalance": {
+              "amount": 3779.80
+            }
+          },
+          "displayFlag": {
+            "summary": true,
+            "transferFrom": false,
+            "transferTo": true,
+            "onlineStatementViewEnabled": true,
+            "isHistoryEnabled": true,
+            "isHistoryEntitled": true
+          }
+        },
+        {
+          "nextPaymentAmount": {
+            "amount": 89.70
+          },
+          "nextPaymentDate": "2023-09-15-07:00",
+          "id": "wxOygyh6hL49kJ-2nMb8WOdYEN6WNCoJqj_iltQ4yqE",
+          "fiId": "00516",
+          "description": "148 Commercial Open",
+          "nickName": "148 Commercial Open",
+          "displayAccountNumber": "XXXX000207",
+          "category": "LOAN",
+          "accountType": "COMMERCIAL_LOAN",
+          "balance": {
+            "currentBalance": {
+              "amount": 1000.10
+            },
+            "availableBalance": {
+              "amount": 900.01
+            },
+            "lastStatementBalance": {
+              "amount": 89.10
+            },
+            "currentPrincipalBalance": {
+              "amount": 300000.01
+            }
+          },
+          "displayFlag": {
+            "summary": true,
+            "transferFrom": true,
+            "transferTo": true,
+            "onlineStatementViewEnabled": true,
+            "isHistoryEnabled": true,
+            "isHistoryEntitled": true
+          }
+        },
+        {
+          "nextPaymentAmount": {
+            "amount": 1320.00
+          },
+          "nextPaymentDate": "2011-10-01-07:00",
+          "id": "AunqsiZ2KPMWXSkx5oBSVsY5dpkmgmE0Lk2DIWwOQfM",
+          "fiId": "00516",
+          "description": "Home Loan",
+          "nickName": "Home Loan",
+          "displayAccountNumber": "XXXX15632",
+          "category": "LOAN",
+          "accountType": "MORTGAGE_LOAN",
+          "balance": {
+            "currentBalance": {
+              "amount": 176207.80
+            },
+            "availableBalance": {
+              "amount": 4779.80
+            }
+          },
+          "displayFlag": {
+            "summary": true,
+            "transferFrom": false,
+            "transferTo": true,
+            "onlineStatementViewEnabled": true,
+            "isHistoryEnabled": true,
+            "isHistoryEntitled": true
+          }
+        },
+        {
+          "nextPaymentAmount": {
+            "amount": 89.70
+          },
+          "nextPaymentDate": "2023-09-15-07:00",
+          "id": "xYgtGDwxSk3Gy_kTyv0LBjB8YmernM_Ify60ombCu58",
+          "fiId": "00516",
+          "description": "276 Commercial Real Estate Open",
+          "nickName": "276 Commercial Real Estate Open",
+          "displayAccountNumber": "XXXX000211",
+          "category": "LOAN",
+          "accountType": "COMMERCIAL_REFI_LOAN",
+          "balance": {
+            "currentBalance": {
+              "amount": 1000.10
+            },
+            "availableBalance": {
+              "amount": 900.01
+            },
+            "lastStatementBalance": {
+              "amount": 89.10
+            },
+            "currentPrincipalBalance": {
+              "amount": 300000.01
+            }
+          },
+          "displayFlag": {
+            "summary": true,
+            "transferFrom": true,
+            "transferTo": true,
+            "onlineStatementViewEnabled": true,
+            "isHistoryEnabled": true,
+            "isHistoryEntitled": true
+          }
+        },
+        {
+          "nextPaymentAmount": {
+            "amount": 0.00
+          },
+          "nextPaymentDate": "2010-01-02-08:00",
+          "id": "xyCDD5mU0WVcuVILfNwCLq-O0m4qzCGmbT2XLFpaTIk",
+          "fiId": "00516",
+          "description": "1024 Tiered Closed",
+          "nickName": "1024 Tiered Closed",
+          "displayAccountNumber": "XXXX000236",
+          "category": "LOAN",
+          "accountType": "TCL_MASTER",
+          "balance": {
+            "currentBalance": {
+              "amount": 10.00
+            },
+            "availableBalance": {
+              "amount": 10.00
+            }
+          },
+          "displayFlag": {
+            "summary": false,
+            "transferFrom": false,
+            "transferTo": false,
+            "onlineStatementViewEnabled": true,
+            "isHistoryEnabled": true,
+            "isHistoryEntitled": true
+          }
+        },
+        {
+          "nextPaymentAmount": {
+            "amount": 0.00
+          },
+          "nextPaymentDate": "2010-01-02-08:00",
+          "id": "3IkQc09P05T5Db7JAhRGe-sxoAxYe4QcRE0AajjqB0g",
+          "fiId": "00516",
+          "description": "1025 Tiered Credit Line Closed",
+          "nickName": "1025 Tiered Credit Line Closed",
+          "displayAccountNumber": "XXXX000237",
+          "category": "LOAN",
+          "accountType": "TCL_CREDIT_LINE",
+          "balance": {
+            "currentBalance": {
+              "amount": 10.00
+            },
+            "availableBalance": {
+              "amount": 10.00
+            }
+          },
+          "displayFlag": {
+            "summary": false,
+            "transferFrom": false,
+            "transferTo": false,
+            "onlineStatementViewEnabled": true,
+            "isHistoryEnabled": true,
+            "isHistoryEntitled": true
+          }
+        },
+        {
+          "nextPaymentAmount": {
+            "amount": 0.00
+          },
+          "nextPaymentDate": "2010-01-02-08:00",
+          "id": "b9RRDUitETcWeK0_f-HwE_fJoYZMfY0Yc4iFsYB1pDs",
+          "fiId": "00516",
+          "description": "1026 Tiered Note Closed",
+          "nickName": "1026 Tiered Note Closed",
+          "displayAccountNumber": "XXXX000238",
+          "category": "LOAN",
+          "accountType": "TCL_NOTE",
+          "balance": {
+            "currentBalance": {
+              "amount": 10.00
+            },
+            "availableBalance": {
+              "amount": 10.00
+            }
+          },
+          "displayFlag": {
+            "summary": false,
+            "transferFrom": false,
+            "transferTo": false,
+            "onlineStatementViewEnabled": true,
+            "isHistoryEnabled": true,
+            "isHistoryEntitled": true
+          }
+        },
+        {
+          "id": "VNK2r6YGX-GXSu2DqKywKMBl15cHvPNb-C-orcagnQQ",
+          "fiId": "00516",
+          "description": "KB TCL Account - SHOULD NOT SEE",
+          "nickName": "KB TCL Account - SHOULD NOT SEE",
+          "displayAccountNumber": "XXXX101022",
+          "category": "TIERED_LOAN",
+          "accountType": "TCL_MASTER",
+          "balance": {
+            "currentBalance": {
+              "amount": 10.00
+            },
+            "availableBalance": {
+              "amount": 10.00
+            }
+          },
+          "displayFlag": {
+            "summary": true,
+            "transferFrom": true,
+            "transferTo": true,
+            "onlineStatementViewEnabled": true,
+            "isHistoryEnabled": true,
+            "isHistoryEntitled": true
+          },
+          "nextPaymentAmount": {
+            "amount": 0.00
+          },
+          "nextPaymentDate": "2010-01-02-08:00"
+        },
+        {
+          "id": "4L7J4eKgsvJSSyTVLjph1SW34gs6xfxKr8W9j7oPRvo",
+          "fiId": "00516",
+          "description": "KB TCL Account - Credit Line",
+          "nickName": "KB TCL Account - Credit Line",
+          "displayAccountNumber": "XXXX101023",
+          "category": "TIERED_LOAN",
+          "accountType": "TCL_CREDIT_LINE",
+          "balance": {
+            "currentBalance": {
+              "amount": 10.00
+            },
+            "availableBalance": {
+              "amount": 10.00
+            }
+          },
+          "displayFlag": {
+            "summary": true,
+            "transferFrom": true,
+            "transferTo": true,
+            "onlineStatementViewEnabled": true,
+            "isHistoryEnabled": true,
+            "isHistoryEntitled": true
+          },
+          "nextPaymentAmount": {
+            "amount": 0.00
+          },
+          "nextPaymentDate": "2010-01-02-08:00"
+        },
+        {
+          "id": "52U55556wt9iERA3nPVGQCWauUGYqnAeP6-Zkd-ljlc",
+          "fiId": "00516",
+          "description": "KB TCL Account - Note",
+          "nickName": "KB TCL Account - Note",
+          "displayAccountNumber": "XXXX101024",
+          "category": "TIERED_LOAN",
+          "accountType": "TCL_NOTE",
+          "balance": {
+            "currentBalance": {
+              "amount": 10.00
+            },
+            "availableBalance": {
+              "amount": 10.00
+            }
+          },
+          "displayFlag": {
+            "summary": true,
+            "transferFrom": true,
+            "transferTo": true,
+            "onlineStatementViewEnabled": true,
+            "isHistoryEnabled": true,
+            "isHistoryEntitled": true
+          },
+          "nextPaymentAmount": {
+            "amount": 0.00
+          },
+          "nextPaymentDate": "2010-01-02-08:00"
+        },
+        {
+          "id": "rukGs5u29v-TSp6CSviNcobBuIgiVNXSruzNCKI5UF0",
+          "fiId": "00516",
+          "description": "Jenny's Checking",
+          "nickName": "Jenny's Checking",
+          "displayAccountNumber": "XXXX12",
+          "category": "CROSS_USER_ACCOUNT",
+          "accountType": "SAVINGS",
+          "displayPrimaryMemberNumber": "*4300",
+          "balance": {},
+          "displayFlag": {
+            "summary": false,
+            "transferFrom": false,
+            "transferTo": true,
+            "onlineStatementViewEnabled": true,
+            "isHistoryEnabled": false,
+            "isHistoryEntitled": true
+          }
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,759 @@
+{
+  "request": {
+    "method": "GET",
+    "url": "http://cms-main-qal1-wug02.qal.int.dbk.ncr.com/v3/fis/00016/config",
+    "headers": {
+      "accept": "application/json",
+      "accept-language": "en",
+      "authorization": "OAuth",
+      "cache-control": "no-cache",
+      "intuit_appid": "AndroidBankingApp",
+      "intuit_ifs_clientappcode": "ANDRD",
+      "intuit_offeringid": "AndroidBankingApp",
+      "intuit_originatingip": "127.0.0.1",
+      "intuit_tid": "0cc48e12-ed3a-4b87-a4cf-35cf3c407720",
+      "postman-token": "bc223fad-a9bf-a81b-ea12-b34449150829",
+      "user-agent": "0516/6.5.1.0 BundleID/com.ifs.mobilebanking.fiid0516 BundleDeviceFamily/AndroidPhone,AndroidTablet (sdk_gphone_x86; ranchu; Android SDK built for x86; Android 10 API Level 29)",
+      "di_alt_cred_id": "F1FBD1CB712F71D9E053C0A011AC945D"
+    }
+  },
+  "testcase": {
+    "expected": {
+      "fi": {
+        "mobileRegistration": {
+          "url": "https://www.iqa016.com/tob/live/reg/ui/signup.html"
+        },
+        "secondaryDisclosure": {
+          "url": "https://www.eastmancu.org/bridge/disclosures/ib/disclose.html"
+        },
+        "adaptiveConversion": {
+          "url": "https://www.iqa016.com/tob/live/usp-core/app/initialLogin"
+        },
+        "mfa": {
+          "termsAndConditions": {
+            "url": "https://www.fultonbankonlinebnk.com/bridge/disclosures/ib/disclose.html"
+          },
+          "isOtpMfaEnabled": true,
+          "isAdminOTPEnabled": true,
+          "isAdminOTPEnabledForBma": true
+        },
+        "touchId": {
+          "aboutLabel": {
+            "fr_CA": "TouchID Testing! – Ajout de texte supplémentaire à des fins de test"
+          }
+        },
+        "faceId": {
+          "aboutLabel": {
+            "zh_TW": "Face Id- Testing",
+            "fr_CA": "Test CMS de reconnaissance faciale",
+            "es_ES": "Face Id- Testing"
+          }
+        },
+        "eyeprintId": {
+          "aboutLabel": {
+            "fr_CA": "Touche Verr. maj. Obsolète"
+          }
+        },
+        "androidFingerprint": {
+          "aboutLabel": {
+            "fr_CA": "Entrez le texte pour expliquer comment le déverrouillage par empreinte digitale Android fonctionnera pour l'application CMA. Entrez le texte pour expliquer comment le déverrouillage par reconnaissance faciale Android fonctionnera pour l'application CMA Entrez le texte pour expliquer comment le déverrouillage biométrique Android fonctionnera pour l'application CMA."
+          }
+        },
+        "quickBalance": {
+          "enabled": true,
+          "transactions": {
+            "enabled": true
+          },
+          "widget": {
+            "enabled": true
+          }
+        },
+        "credentialRecovery": {
+          "enabled": false,
+          "url": "https://www.iqa016.com/auth-olb/live/v1/authUpdateMobile"
+        },
+        "errorCodeMessages": {
+          "27118": {
+            "zh_TW": "我們正在更新系統。更新期間網站暫時無法使用。請稍後重試",
+            "fr_CA": "Nous mettons à jour notre système. Le site sera indisponible pendant cette mise à jour. Essayez d’accéder à ce site plus tard.",
+            "en_US": "We are updating our system. During this update, the site may be unavailable. Try accessing this site later",
+            "es_ES": "Nuestro sistema se está actualizando. Durante dicha actualización, el sitio no estará disponible. Inténtelo en otro momento."
+          },
+          "25100": {
+            "en_US": "English:You Account is locked due to multiple invalid attempts. To unlock your account, ,a id=\"forgotCredentialslockedLink\" class=\"bluelinkoutline-cls\" href={0}\">click here</a> or contact us at _com.di.tob.usp.ficontactMethod__."
+          },
+          "30044": {
+            "fr_CA": "Tester le mot de passe ESSAI de réinitialisation"
+          },
+          "26600": {
+            "fr_CA": "Tester le mot de passe ESSAI de réinitialisation"
+          },
+          "27194": {
+            "fr_CA": "Message anglais d'expiration du mot de passe"
+          },
+          "26349": {
+            "zh_TW": "我們正在更新系統。更新期間網站暫時無法使用。請稍後重試",
+            "fr_CA": "Nous mettons à jour notre système. Le site sera indisponible pendant cette mise à jour. Essayez d’accéder à ce site plus tard.",
+            "en_US": "We are updating our system. During this update, the site may be unavailable. Try accessing this site later",
+            "es_ES": "Nuestro sistema se está actualizando. Durante dicha actualización, el sitio no estará disponible. Inténtelo en otro momento."
+          }
+        },
+        "security": {
+          "compromisedDeviceWarningLabel": {
+            "en_US": "A security vulnerability has been detected on this device (rooted or jailbroken). For your protection, our app can not be accessed from a device with this vulnerability. Please retry using another device that has not been compromised. Thank you."
+          },
+          "oauth": {
+            "sha256": {
+              "enabled": false
+            }
+          }
+        },
+        "messageOfTheDay": "<strong>Branches will be closed Monday May 5th</strong><br><strong>Please click here for more information. Or just stay home! Maybe check out the beach! Enjoy a walk in the park! This is a test for a very long message of the day</strong>",
+        "stepUpAuth": {
+          "riskAdvice": {
+            "deny": {
+              "zh_TW": "出於安全考慮，您現在不能繼續。  請聯絡 First Digital at 呼叫中心 解決此問題。",
+              "fr_CA": "Pour des raisons de sécurité, vous ne pouvez pas continuer pour le moment. Veuillez contacter Premier digital au Notre centre d’appels pour résoudre ce problème.",
+              "en_US": "Due to security concerns, you cannot proceed at this time.  Please contact First Digital at 1112223333 to resolve this issue.",
+              "es_ES": "Por motivos de seguridad, no puede continuar en este momento.  Comuníquese con First Digital al número Nuestro Centro de Llamadas para solucionar este problema."
+            }
+          }
+        },
+        "showAvailableBalanceEmphasized": true,
+        "isOtpMfaEnabled": true,
+        "prelogin": {
+          "screen": {
+            "showAlways": true,
+            "onlyShowForFirstTimeLoginUsers": false
+          }
+        },
+        "locations": {
+          "wave2": {
+            "client": {
+              "enabled": true
+            }
+          }
+        },
+        "monitoring": {
+          "embrace": {
+            "enabled": false
+          }
+        },
+        "epoxy": {
+          "cbs": {
+            "enabled": true
+          },
+          "history": {
+            "label": {
+              "displayMemberNumber": {
+                "zh_TW": "Member Number",
+                "fr_CA": "Member Number",
+                "en_US": "Member Number",
+                "es_ES": "Member Number"
+              },
+              "displayMICR": {
+                "zh_TW": "MICR",
+                "fr_CA": "MICR",
+                "en_US": "MICR",
+                "es_ES": "MICR"
+              },
+              "displayACH": {
+                "zh_TW": "ACH number",
+                "fr_CA": "ACH number",
+                "en_US": "ACH number",
+                "es_ES": "ACH number"
+              }
+            }
+          }
+        },
+        "universalControls": {
+          "loginConfig": {
+            "enabled": true
+          }
+        },
+        "alerts": {
+          "tpv": {
+            "retail": {
+              "enabled": false
+            }
+          }
+        },
+        "commHub": {
+          "cma": {
+            "enabled": false
+          },
+          "bma": {
+            "enabled": false
+          }
+        },
+        "cas": {
+          "subuser": {
+            "enabled": true
+          }
+        },
+        "accountSummary": {
+          "suppressAchId": {
+            "enabled": true
+          }
+        },
+        "account": {
+          "showMICR": {
+            "enabled": true
+          }
+        },
+        "taptopay": {
+          "retail": {
+            "enabled": false
+          },
+          "business": {
+            "enabled": true
+          }
+        },
+        "userProfile": {
+          "linking": {
+            "disclosure": {
+              "enabled": true,
+              "url": "https://www.iqa016.com/bridge/disclosures/rbtoggle/disclose.html"
+            }
+          },
+          "switching": {
+            "speedbump": {
+              "enabled": false,
+              "message": {
+                "en_US": "You acknowledge and accept that the terms and conditions may very across the accounts show in each profile. Those terms and conditions do not apply to other accounts, although linked online. For more details about the terms and conditions that apply to each account, consult the account specific terms and conditions or contact your institution for more information."
+              }
+            },
+            "disclosure": {
+              "enabled": true,
+              "url": "https://www.iqa016.com/bridge/disclosures/rbtoggle/disclose.html"
+            }
+          }
+        },
+        "modernui": {
+          "enabled": {
+            "retail": {
+              "features": "Transfers"
+            },
+            "business": {
+              "features": "Transfers"
+            }
+          }
+        },
+        "apx": {
+          "authentication": {
+            "enabled": true,
+            "totp": {
+              "enabled": true
+            }
+          }
+        },
+        "fiName": "First Digital",
+        "cookiesHandling": {
+          "deleteCookiesEnabled": "false",
+          "cookies": [
+            {
+              "cookieValues": [
+                "session"
+              ],
+              "domain": "secure14-uat.revation.com",
+              "appCode": "V5427-SAML_CHAT"
+            }
+          ]
+        },
+        "actionableAlertsConfiguration": [
+          {
+            "institutionId": "00016",
+            "alertTypeName": "LOWBAL",
+            "actionableAlertType": "LOWBALANCE",
+            "actions": [
+              "TRANSFER"
+            ],
+            "pushActive": false,
+            "actionableConfigurationId": 0
+          }
+        ]
+      },
+      "credential": {
+        "password": {
+          "validators": [
+            {
+              "pattern": "^[A-Za-z0-9!\"#$%&'()*+,-./:;<=>?@\\[\\\\\\]^_`{|}~]{6,18}$",
+              "label": {
+                "zh_TW": "長度在6到18個字符之間",
+                "fr_CA": "Longueur entre 6 et 18 caractères",
+                "es_ES": "Entre 6 y 18 caracteres de longitud",
+                "en_US": "Between 6 and 18 characters long"
+              }
+            },
+            {
+              "pattern": "^(?=.*[a-zA-Z])(?=.*[0-9]).*|(?=.*[a-zA-Z])(?=.*[!\\\"#$%&'()*+,-.\/:\\\\;<=>?@\\[\\]\\^_`{|}~]).*$",
+              "label": {
+                "zh_TW": "混合使用字母、數字或符號",
+                "fr_CA": "Utilisez une combinaison de 6 lettres, chiffres et symboles.",
+                "es_ES": "Use una mezcla de letras y números o símbolos",
+                "en_US": "Use a mix of letters, numbers or symbols"
+              }
+            }
+          ],
+          "length": {
+            "minimum": 6,
+            "maximum": 18
+          },
+          "displayTemporaryPassword": false
+        }
+      },
+      "ibmTrusteer": {
+        "displayErrorMessage": {
+          "zh_TW": "我們偵測到一個未知系統試圖存取您的帳戶。如需其他協助，請聯絡客戶服務中心。",
+          "en_US": "We've detected an unknown system attempting to access your account. For additional assistance please contact customer service.",
+          "es_ES": "Hemos detectado un sistema desconocido que intenta acceder a su cuenta. Para obtener más ayuda, contacte al servicio al cliente."
+        }
+      },
+      "webView": {
+        "nonFatalCheckEnabled": false
+      },
+      "biocatch": {
+        "wupURL": "https://wup-nemotest.us.v2.customers.biocatch.com",
+        "vendorId": "nemotest",
+        "displayErrorMessage": {
+          "zh_TW": "處理您的請求時出錯。 如需更多幫助，請聯繫客服。",
+          "fr_CA": "Une erreur est survenue lors du traitement de votre requête. Pour plus d’assistance, veuillez contacter le service client.",
+          "en_US": "Biocatch There was an error processing your request. For additional assistance please contact customer service.",
+          "es_ES": "Hubo un error al procesar su solicitud. Para obtener asistencia adicional, póngase en contacto con el servicio de atención al cliente."
+        },
+        "ssoContext": {
+          "TPV_FISERV_ZELLE": "PAYMENT_P2P"
+        }
+      },
+      "segmentAnalytics": {
+        "enabled": false
+      },
+      "qualtrics": {
+        "enabled": false
+      },
+      "firstTimeSplashPage": {
+        "enabled": false
+      },
+      "demo": {
+        "enabled": true,
+        "userIdPattern": "^ditestaccount$",
+        "httpSimConfigUrl": "https://resource.qal1.digitalinsight.com/httpsim/demo.cfg"
+      },
+      "login": {
+        "signup": {
+          "label": {
+            "en_US": "Sign up"
+          }
+        },
+        "locations": {
+          "label": {
+            "zh_TW": "Locations_Chinese",
+            "fr_CA": "Locations_French",
+            "en_US": "Locations_English",
+            "es_ES": "Locations_Spanish"
+          }
+        },
+        "image": {
+          "url": ""
+        }
+      },
+      "callSign": {
+        "enabled": "true"
+      },
+      "adobeAnalytics": {
+        "enabled": true
+      },
+      "epoxyForBma": {
+        "enabled": false
+      },
+      "firstTimeLoginMigrationUrl": {
+        "enabled": false
+      },
+      "fdic": {
+        "enabledPages": "login,home,transactionhistory,transfer,rdc,unifiedaccountsummary",
+        "insuredAccountTypes": "0,1,513,4",
+        "nonInsuredAccountTypes": "2,512,64,256,148",
+        "logoPath": "https://www.iqa000.com/mstinc/web/images/fdic_full.png",
+        "insuredStatement": {
+          "zh_TW": "FDIC 承保：得到美国政府的充分信任和信用支持。",
+          "fr_CA": "Assuré par la FDIC : soutenu par la pleine confiance et le crédit du gouvernement américain.",
+          "en_US": "FDIC-Insured: Backed by the full faith and credit of the U.S. Government"
+        },
+        "nonInsuredStatement": {
+          "zh_TW": "美国政府的充分信任和信用支持。Non-Isured",
+          "fr_CA": "soutenu par la pleine confiance et le crédit du Non-Isured",
+          "en_US": "Non-deposit products: Are not FDIC insured; Are not deposits; May lose value.",
+          "es_ES": "Respaldado por la plena fe y crédito del - Non-Insured"
+        }
+      },
+      "bffApigee": {
+        "url": "https://www.iqa003.com/digitalbanking/stage/"
+      },
+      "isGreenLightDemoFI": true,
+      "navigation": {
+        "tabBarItemIds": [
+          "31"
+        ],
+        "items": [
+          {
+            "id": "0",
+            "type": "MENU_GROUP",
+            "featureId": "01307525-a1f4-438f-a9a1-55cec4dccfc6",
+            "label": {
+              "en_US": "New Menu Group"
+            },
+            "icon": "https://qal.dbk.ncr.com/images/dbk/icons/header.png",
+            "itemIds": [
+              "1"
+            ]
+          },
+          {
+            "id": "2",
+            "type": "STANDARD",
+            "featureId": "Interact",
+            "label": {
+              "en_US": "Interact"
+            },
+            "icon": "https://qal.dbk.ncr.com/images/00016/media/icons8-bank-account-64-FdbtW.png",
+            "speedBumpText": "Interact Speed Bump Message"
+          },
+          {
+            "id": "5",
+            "type": "STANDARD",
+            "featureId": "Interact",
+            "label": {
+              "en_US": "Interact"
+            },
+            "icon": "https://qal.dbk.ncr.com/images/00016/media/icons8-financial-growth-analysis-48-Ov5CP.png",
+            "speedBumpText": "Interact Speed Bump Message"
+          },
+          {
+            "id": "6",
+            "type": "MENU_GROUP",
+            "featureId": "46311416-394b-4a5e-a1be-254abd2c5540",
+            "label": {
+              "en_US": "New Menu Group"
+            },
+            "icon": "https://qal.dbk.ncr.com/images/dbk/icons/header.png",
+            "itemIds": [
+              "7"
+            ]
+          },
+          {
+            "id": "8",
+            "type": "STANDARD",
+            "featureId": "Locations",
+            "label": {
+              "en_US": "Locations"
+            },
+            "icon": "https://qal.dbk.ncr.com/images/dbk/icons/locations.png",
+            "speedBumpText": "Locations speed bump"
+          },
+          {
+            "id": "9",
+            "type": "MENU_GROUP",
+            "featureId": "837f477e-f683-4d81-b62b-2f7466d01f5c",
+            "label": {
+              "en_US": "Interact"
+            },
+            "icon": "https://qal.dbk.ncr.com/images/00016/media/icons8-insert-card-80-ZSiHm.png",
+            "itemIds": [
+              "10"
+            ]
+          },
+          {
+            "id": "11",
+            "type": "STANDARD",
+            "featureId": "Interact",
+            "label": {
+              "en_US": "Interact"
+            },
+            "icon": "https://qal.dbk.ncr.com/images/00016/media/icons8-charity-48-4UH4m.png",
+            "speedBumpText": "Interact Speed Bump Message"
+          },
+          {
+            "id": "12",
+            "type": "APP",
+            "featureId": "e07b7c62-5ca6-475e-87dd-5e35b3fc3d84",
+            "label": {
+              "en_US": "DCU Bank- App link"
+            },
+            "icon": "https://qal.dbk.ncr.com/images/dbk/icons/applinks.png",
+            "appId": "com.projectfinance.android.dcu&hl= en_US",
+            "speedBumpText": "This is a sppedbump for a DCU bank app link!"
+          },
+          {
+            "id": "13",
+            "type": "APP",
+            "featureId": "75d20eee-3308-4bb6-8c0b-c7e92b447970",
+            "label": {
+              "en_US": "DCU Bank- Invalid App link"
+            },
+            "icon": "https://qal.dbk.ncr.com/images/dbk/icons/applinks.png",
+            "appId": "com.projectfinances.android.dcu&hl"
+          },
+          {
+            "id": "14",
+            "type": "APP",
+            "featureId": "e07b7c62-5ca6-475e-87dd-5e35b3fc3d84",
+            "label": {
+              "en_US": "DCU Bank -App Link"
+            },
+            "icon": "https://qal.dbk.ncr.com/images/dbk/icons/applinks.png",
+            "appId": "com.projectfinance.android.dcu&hl= en_US",
+            "speedBumpText": "This is a sppedbump for a DCU bank app link!"
+          },
+          {
+            "id": "15",
+            "type": "APP",
+            "featureId": "75d20eee-3308-4bb6-8c0b-c7e92b447970",
+            "label": {
+              "en_US": "DCU Bank-Invalid App link"
+            },
+            "icon": "https://qal.dbk.ncr.com/images/dbk/icons/applinks.png",
+            "appId": "com.projectfinances.android.dcu&hl"
+          },
+          {
+            "id": "16",
+            "type": "STANDARD",
+            "featureId": "Settings",
+            "label": {
+              "en_US": "My Settings"
+            },
+            "icon": "https://qal.dbk.ncr.com/images/dbk/icons/settings.png"
+          },
+          {
+            "id": "20",
+            "type": "APP",
+            "featureId": "75d20eee-3308-4bb6-8c0b-c7e92b447970",
+            "label": {
+              "en_US": "DCU invali"
+            },
+            "icon": "https://qal.dbk.ncr.com/images/dbk/icons/applinks.png",
+            "appId": "com.projectfinances.android.dcu&hl"
+          },
+          {
+            "id": "21",
+            "type": "PUBLIC",
+            "featureId": "de750c66-6a12-477d-8af4-f7bfb15393ec",
+            "label": {
+              "en_US": "NCR URL - Logged out Only  Link"
+            },
+            "icon": "https://qal.dbk.ncr.com/images/dbk/icons/publiclink.png",
+            "url": "http://www.ncr.com",
+            "speedBumpText": "NCR URL Speed Bump"
+          },
+          {
+            "id": "22",
+            "type": "PUBLIC",
+            "featureId": "298ad31c-59b7-4ca7-b6f8-1a1eba7515cf",
+            "label": {
+              "en_US": "Email US-1"
+            },
+            "icon": "https://qal.dbk.ncr.com/images/00016/media/circle-XXyV6.png",
+            "url": "mailto:support@ncr.com"
+          },
+          {
+            "id": "23",
+            "type": "PUBLIC",
+            "featureId": "2658b072-98db-4998-aba9-0ae6d50b8247",
+            "label": {
+              "en_US": "Call US"
+            },
+            "icon": "https://qal.dbk.ncr.com/images/dbk/icons/publiclink.png",
+            "url": "tel:+1 8087778890"
+          },
+          {
+            "id": "24",
+            "type": "PUBLIC",
+            "featureId": "P2",
+            "label": {
+              "en_US": "View Policy on Website"
+            },
+            "icon": "https://qal.dbk.ncr.com/images/dbk/icons/publiclink.png",
+            "url": "https://www.digitalinsight.com/privacy.html"
+          },
+          {
+            "id": "25",
+            "type": "PUBLIC",
+            "featureId": "b465f39a-cfb7-415a-8ef1-94610adf9af0",
+            "label": {
+              "en_US": "Public Link-Pre Login-NCR"
+            },
+            "icon": "https://qal.dbk.ncr.com/images/dbk/icons/publiclink.png",
+            "url": "https://www.ncr.com"
+          },
+          {
+            "id": "26",
+            "type": "PUBLIC",
+            "featureId": "468151a5-37fa-4b7b-8cd9-80ea2ff3323e",
+            "label": {
+              "en_US": "PublicLink-Pre andP ostLogin-NCR1"
+            },
+            "icon": "https://qal.dbk.ncr.com/images/dbk/icons/publiclink.png",
+            "url": "https://www.ncr.com"
+          },
+          {
+            "id": "27",
+            "type": "PUBLIC",
+            "featureId": "2658b072-98db-4998-aba9-0ae6d50b8247",
+            "label": {
+              "en_US": "Call US"
+            },
+            "icon": "https://qal.dbk.ncr.com/images/dbk/icons/publiclink.png",
+            "url": "tel:+1 8087778890"
+          },
+          {
+            "id": "28",
+            "type": "PUBLIC",
+            "featureId": "298ad31c-59b7-4ca7-b6f8-1a1eba7515cf",
+            "label": {
+              "en_US": "Email US"
+            },
+            "icon": "https://qal.dbk.ncr.com/images/dbk/icons/publiclink.png",
+            "url": "mailto:support@ncr.com"
+          },
+          {
+            "id": "1",
+            "type": "STANDARD",
+            "featureId": "Interact",
+            "label": {
+              "en_US": "Interact"
+            },
+            "icon": "https://qal.dbk.ncr.com/images/00016/media/icons8-bank-50-8wsi6.png",
+            "speedBumpText": "Interact Speed Bump Message"
+          },
+          {
+            "id": "7",
+            "type": "STANDARD",
+            "featureId": "Interact",
+            "label": {
+              "en_US": "Interact"
+            },
+            "icon": "https://qal.dbk.ncr.com/images/00016/media/icons8-merchant-account-50-iJJYw.png",
+            "speedBumpText": "Interact Speed Bump Message"
+          },
+          {
+            "id": "10",
+            "type": "STANDARD",
+            "featureId": "Interact",
+            "label": {
+              "en_US": "Interact"
+            },
+            "icon": "https://qal.dbk.ncr.com/images/00016/media/icons8-paycheque-48-enYMx.png",
+            "speedBumpText": "Interact Speed Bump Message"
+          },
+          {
+            "id": "31",
+            "type": "PAGE",
+            "featureId": "More",
+            "widgetIds": [
+              "0",
+              "1",
+              "2",
+              "3"
+            ]
+          }
+        ],
+        "widgets": [
+          {
+            "id": "0",
+            "type": "QUICK_ACTION_BAR",
+            "itemIds": [
+              "0",
+              "2"
+            ]
+          },
+          {
+            "id": "1",
+            "type": "NAVIGATION_LIST",
+            "columnCount": "TWO_COLUMN",
+            "iconPosition": "ITEM",
+            "itemIds": [
+              "5",
+              "6",
+              "8",
+              "9",
+              "11",
+              "12",
+              "13",
+              "14",
+              "15",
+              "20",
+              "21",
+              "22",
+              "23",
+              "24",
+              "25",
+              "26",
+              "27",
+              "28"
+            ]
+          },
+          {
+            "id": "2",
+            "type": "NOTE",
+            "label": {
+              "en_US": "Routing Number :"
+            },
+            "description": {
+              "en_US": "313077513"
+            }
+          },
+          {
+            "id": "3",
+            "type": "NOTE",
+            "label": {
+              "en_US": "Title"
+            },
+            "description": {
+              "en_US": "Desc"
+            }
+          }
+        ]
+      },
+      "rdc": {
+        "vendorName": "vertifi",
+        "newVertifiUIEnabled": true,
+        "newVertifiVersionEnabled": true
+      },
+      "apigee": {
+        "useDynamicUrl": true,
+        "url": "https://www.iqa003.com",
+        "context": "/digitalbanking/stage"
+      },
+      "branding": {
+        "secondaryTextColor": {
+          "srgb": "1.0 1.0 1.0"
+        },
+        "headerTextColor": {
+          "srgb": "1.0 1.0 1.0"
+        },
+        "headerColor": {
+          "srgb": "0.0627451 0.27450982 0.38431373"
+        },
+        "buttonIsSecondaryColor": true,
+        "shadingTheme": "DARK",
+        "primaryColor": {
+          "srgb": "0.0627451 0.27450982 0.38431373"
+        },
+        "primaryTextColor": {
+          "srgb": "1.0 1.0 1.0"
+        },
+        "secondaryColor": {
+          "srgb": "0.5647059 0.3529412 0.5372549"
+        },
+        "sectionHeaderIsSecondaryColor": false
+      },
+      "accounts": {
+        "backgroundImage": {
+          "url": ""
+        },
+        "headerLogoImage": {
+          "url": ""
+        }
+      }
+    }
+  }
+}
+
